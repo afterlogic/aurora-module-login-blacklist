@@ -6,6 +6,6 @@
 		"afterlogic/aurora-framework": "~0.7"
 	},
 	"extra": {
-		"installer-name": "FilesWebclient"
+		"installer-name": "LoginBlacklist"
 	}
 }
