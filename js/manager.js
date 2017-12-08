@@ -11,7 +11,7 @@ module.exports = function (oAppData) {
 		
 		bAdminUser = App.getUserRole() === Enums.UserRole.SuperAdmin
 	;
-	
+	console.log(bAdminUser);
 	Settings.init(oAppData);
 
     if (bAdminUser)
@@ -21,9 +21,9 @@ module.exports = function (oAppData) {
                 ModulesManager.run('AdminPanelWebclient', 'registerAdminPanelTab', [
                     function(resolve) {
                         require.ensure(
-                            ['modules/%ModuleName%/js/views/LoginBlacklistAdminSettingsView.js'],
+                            ['modules/%ModuleName%/js/views/LoginBlackListAdminSettingsView.js'],
                             function() {
-                                resolve(require('modules/%ModuleName%/js/views/LoginBlacklistAdminSettingsView.js'));
+                                resolve(require('modules/%ModuleName%/js/views/LoginBlackListAdminSettingsView.js'));
                             },
                             "admin-bundle"
                         );
