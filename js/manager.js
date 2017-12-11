@@ -4,15 +4,10 @@ module.exports = function (oAppData) {
 
 	var
 		App = require('%PathToCoreWebclientModule%/js/App.js'),
-
 		TextUtils = require('%PathToCoreWebclientModule%/js/utils/Text.js'),
-
 		Settings = require('modules/%ModuleName%/js/Settings.js'),
-		
-		bAdminUser = App.getUserRole() === Enums.UserRole.SuperAdmin
-	;
-	console.log(bAdminUser);
-	Settings.init(oAppData);
+		bAdminUser = App.getUserRole() === Enums.UserRole.SuperAdmin;
+	    Settings.init(oAppData);
 
     if (bAdminUser)
     {
