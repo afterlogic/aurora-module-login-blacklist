@@ -59,6 +59,10 @@ class Module extends \Aurora\System\Module\AbstractModule
         }
 
         foreach($aRules as $sRegexp) {
+            if (empty($sRegexp)) {
+                continue;
+            }
+
             if (preg_match($sRegexp, $sLogin, $aMatches)) {
                 return true;
             }
